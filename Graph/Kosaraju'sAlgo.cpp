@@ -1,5 +1,5 @@
 // Strongly Connected Components (Kosaraju's Algo)
-// SSC -> it is subgraph in which you travel from every node you to every node.
+// SSC -> it is subgraph in which you can travel from every node to every node.
 //Kosaraju Algo -> It is bascially a algo used to solve the ssc problem ..
 //there are step to solve this problem 
 //Step 1 -> Sort the graph (Topological sort)
@@ -16,6 +16,7 @@ class Solution
 	vector<int>&ts,vector<int>&vis){
 	    vis[source]=1;
 	    for(auto i:m[source]){
+        
 	        if(vis[i]==0){
 	            topologicalSort(m,i,ts,vis);
 	        }
